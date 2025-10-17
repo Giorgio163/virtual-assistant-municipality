@@ -1,0 +1,36 @@
+[
+  {
+    "id": "carta_identita",
+    "title": "Carta d'identità elettronica",
+    "office": "Anagrafe",
+    "opening_hours": "Lunedì-Venerdì 09:00-12:30",
+    "text": "La carta d'identità elettronica (CIE) sostituisce quella cartacea e si richiede presso l'Ufficio Anagrafe.",
+    "faqs": [
+      {"q": "Quanto costa la carta d'identità?", "a": "Il costo è di 22,00 euro."},
+      {"q": "Quanto dura la carta d'identità?", "a": "Ha una durata di 10 anni."},
+      {"q": "Serve la prenotazione?", "a": "Sì, è necessario prenotare un appuntamento."}
+    ]
+  },
+  {
+    "id": "certificato_residenza",
+    "title": "Certificato di residenza",
+    "office": "Anagrafe",
+    "opening_hours": "Lunedì-Venerdì 09:00-12:30",
+    "text": "Il certificato di residenza attesta la residenza anagrafica del cittadino.",
+    "faqs": [
+      {"q": "Serve la marca da bollo?", "a": "No, solo per usi esenti da bollo."},
+      {"q": "Posso richiederlo online?", "a": "Sì, tramite il portale ANPR."}
+    ]
+  },
+  {
+    "id": "tari",
+    "title": "TARI - Tassa sui rifiuti",
+    "office": "Tributi",
+    "opening_hours": "Lunedì-Venerdì 09:00-12:30",
+    "text": "La TARI è la tassa sui rifiuti dovuta per il servizio di gestione.",
+    "faqs": [
+      {"q": "Come si paga la TARI?", "a": "Tramite bollettino inviato a casa o pagoPA."},
+      {"q": "Posso rateizzare la TARI?", "a": "Sì, secondo le modalità comunali."}
+    ]
+  }
+]
