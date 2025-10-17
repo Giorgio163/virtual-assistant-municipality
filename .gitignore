@@ -1,2 +1,5 @@
 .idea
 venv/
+backend/token.json
+backend/credentials.json
+__pycache__/
