@@ -50,20 +50,14 @@ venv\Scripts\Activate.ps1
 Make sure your virtual environment is active, then install required packages:
 
 ```bash
-pip install -r requirements.txt
-```
-
-If `requirements.txt` is missing, the dependencies are:
-
-```bash
-pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib selenium beautifulsoup4 flask python-dotenv
+pip install -r backend/requirements.txt
 ```
 
 ---
 
 ## 4 — Scraping municipality services (produce raw data)
 
-**Selenium dynamic scraper**
+**Selenium dynamic scraper (Please give it some time to finish)**
 
 ```bash
 python scraper/scrape_codroipo_selenium.py
@@ -73,7 +67,6 @@ Expected output (example):
 
 ```
 ✅ Trovati 71 servizi dinamici.
-✅ Salvato data/raw_services.json
 ```
 ---
 
