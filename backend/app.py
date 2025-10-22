@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 import json, os
+import re
+import unicodedata
 from calendar_service import check_availability, create_event
 
 app = Flask(__name__)
@@ -12,14 +14,26 @@ scheduler.start()
 with open("kb/services.json", encoding="utf8") as f:
     KB = json.load(f)
 
+def normalize_text(text):
+    text = text.lower()
+    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf8')
+    text = text.replace("'", "").replace("’", "")
+    return text
+
 @app.route("/search", methods=["POST"])
 def search():
     data = request.get_json()
-    query = data.get("query", "").lower()
+    query = normalize_text(data.get("query", ""))
 
     for service in KB:
         for faq in service["faqs"]:
-            if faq["q"].lower() in query:
+            question = normalize_text(faq["q"])
+            if re.search(r"\b" + re.escape(question) + r"\b", query):
+                return jsonify({"answer": faq["a"]})
+
+    for service in KB:
+        for faq in service["faqs"]:
+            if any(word in query for word in question.split()):
                 return jsonify({"answer": faq["a"]})
 
     return jsonify({"answer": "Mi dispiace, non ho trovato informazioni su questo argomento."})

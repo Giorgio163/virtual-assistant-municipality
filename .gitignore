@@ -1,5 +1,20 @@
-.idea
+# Ambiente virtuale
 venv/
-backend/token.json
-backend/credentials.json
 __pycache__/
+
+# Credenziali Google
+backend/credentials.json
+backend/token.json
+
+# Dati locali generati
+data/raw_services.json
+data/services.json
+logs/
+*.log
+
+# File temporanei e IDE
+.DS_Store
+*.pyc
+*.swp
+.idea/
+.vscode/
